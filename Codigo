@@ -1,0 +1,74 @@
+var dadosCadastrais01 = {
+    nome: "Catarine",
+    idade: 20,
+    filiacao: ["Bruno Falcão", "Caroline"],
+    endereco: {
+        rua:"Rua maria",
+        cidade: "João Pessoa",
+        estado: "Paraiba"
+    },
+    dadosCompletos: function(){
+        if(this.nome == "")
+            return false;
+        else if(this.idade == 0)
+            return false;
+        else if(this.filiacao == "")
+            return false;
+        else if(this.endereco.rua == "")
+            return false;
+        else if(this.endereco.cidade == "")
+            return false;
+        else if(this.endereco.estado == "")
+            return false;
+        return true
+    }
+}
+var dadosCadastrais02 = {
+    nome: "Gilberto",
+    idade: 75,
+    filiacao: ["Gildario", "Gildasio"],
+    endereco: {
+        rua:"Rua Flamengo",
+        cidade: "recife",
+        estado: "Pernambuco"
+    },
+    dadosCompletos: function(){
+        if(this.nome == "")
+            return false;
+        else if(this.idade == 0)
+            return false;
+        else if(this.filiacao == "")
+            return false;
+        else if(this.endereco.rua == "")
+            return false;
+        else if(this.endereco.cidade == "")
+            return false;
+        else if(this.endereco.estado == "")
+            return false;
+        return true
+    }
+}
+
+function imprimir(dadosCadastrais01, dadosCadastrais02){
+    console.log("Nome: " + dadosCadastrais01.nome),
+    console.log("Idade: " + dadosCadastrais01.idade),
+    console.log("Pai: " + dadosCadastrais01.filiacao[0]),
+    console.log("Mãe: " + dadosCadastrais01.filiacao[1]),
+    console.log("Rua: " + dadosCadastrais01.endereco.rua),
+    console.log("Cidade: " + dadosCadastrais01.endereco.cidade),
+    console.log("Estado: " + dadosCadastrais01.endereco.estado),
+    console.log("Dados completos? " + dadosCadastrais01.dadosCompletos()),
+
+    console.log(),
+
+    console.log("Nome: " + dadosCadastrais02.nome),
+    console.log("Idade: " + dadosCadastrais02.idade),
+    console.log("Pai: " + dadosCadastrais02.filiacao[0]),
+    console.log("Mãe: " + dadosCadastrais02.filiacao[1]),
+    console.log("Rua: " + dadosCadastrais02.endereco.rua),
+    console.log("Cidade: " + dadosCadastrais02.endereco.cidade),
+    console.log("Estado: " + dadosCadastrais02.endereco.estado),
+    console.log("Dados completos? " + dadosCadastrais02.dadosCompletos())
+}
+
+console.log(imprimir(dadosCadastrais01, dadosCadastrais02))
